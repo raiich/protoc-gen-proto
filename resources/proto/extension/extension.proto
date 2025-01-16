@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package extension;
+
+import "google/protobuf/descriptor.proto";
+
+option go_package = "github.com/raiich/protoc-plugin-template-go/generated/extension";
+
+extend google.protobuf.ServiceOptions {
+  ServiceOptions service_opts = 50001;
+}
+
+message ServiceOptions {
+  int32 id = 1;
+}
+
+extend google.protobuf.MethodOptions {
+  MethodOptions method_opts = 50001;
+}
+
+message MethodOptions {
+  int32 id = 1;
+}
+
+message None {}
