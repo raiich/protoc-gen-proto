@@ -30,6 +30,7 @@ func TestGenerate(t *testing.T) {
 		t.Logf("%s", file.GetName())
 		t.Logf("%s", file.GetContent())
 	}
+	assert.Nil(t, resp.Error)
 	out, err := proto.Marshal(resp)
 	assert.NoError(t, err)
 	assert.Equal(t, testdata.ExpectedStdout, out)

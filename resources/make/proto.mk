@@ -23,10 +23,11 @@ PROTO := $(shell find resources/proto -name \*.proto)
 
 .PHONY: code
 code: $(PROTO) $(PROTOC_DEP)
-	mkdir -p generated
+	mkdir -p generated/go
+	mkdir -p generated/proto
 	$(PROTOC) -I=resources/proto -I=$(THIRD_PARTY) \
-	  --go_out=generated --go_opt=paths=source_relative \
-	  --template-go_out=generated --template-go_opt=paths=source_relative \
+	  --go_out=generated/go --go_opt=paths=source_relative \
+	  --template-go_out=generated/proto --template-go_opt=paths=source_relative \
 	  $(PROTO)
 
 .PHONY: testdata
