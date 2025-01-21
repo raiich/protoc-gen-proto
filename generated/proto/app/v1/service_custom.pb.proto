@@ -6,7 +6,7 @@ package app.v1;
 
 import "extension/extension.proto";
 
-option go_package = "github.com/raiich/protoc-plugin-template-go/generated/app/v1";
+option go_package = "github.com/raiich/protoc-plugin-template-go/generated/go/app/v1";
 
 service Service {
   option (extension.service_opts) = {id: 123};

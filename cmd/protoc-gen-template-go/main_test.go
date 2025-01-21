@@ -26,10 +26,6 @@ func TestGenerate(t *testing.T) {
 	assert.NoError(t, run(gen))
 
 	resp := gen.Response()
-	for _, file := range resp.File {
-		t.Logf("%s", file.GetName())
-		t.Logf("%s", file.GetContent())
-	}
 	assert.Nil(t, resp.Error)
 	out, err := proto.Marshal(resp)
 	assert.NoError(t, err)

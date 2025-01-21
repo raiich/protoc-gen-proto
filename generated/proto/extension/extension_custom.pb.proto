@@ -6,7 +6,7 @@ package extension;
 
 import "google/protobuf/descriptor.proto";
 
-option go_package = "github.com/raiich/protoc-plugin-template-go/generated/extension";
+option go_package = "github.com/raiich/protoc-plugin-template-go/generated/go/extension";
 
 extend google.protobuf.ServiceOptions {
   ServiceOpts service_opts = 50001;
