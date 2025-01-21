@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package app.v1;
+
+import "extension/extension.proto";
+
+option go_package = "github.com/raiich/protoc-plugin-template-go/generated/go/app/v1";
+
+service Service {
+  option (extension.service_opts) = {id: 123};
+
+  rpc Method1(Request) returns (extension.None) {
+    option (extension.method_opts) = {id: 123};
+  }
+}
+
+message Request {
+  optional string message = 1;
+}
