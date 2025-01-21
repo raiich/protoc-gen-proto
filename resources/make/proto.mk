@@ -19,10 +19,12 @@ PROTOC_DEP := $(PROTOC) \
   protodep.lock
 BUF := $(GO_BIN)/buf
 
+GO_FILES := $(shell find . -path "./generated" -prune -or -name \*.go -print)
 PROTO := $(shell find resources/proto -name \*.proto)
 
-.PHONY: code
-code: $(PROTO) $(PROTOC_DEP)
+generated: $(PROTO) $(PROTOC_DEP)
+	mkdir -p generated
+	touch generated
 	mkdir -p generated/go
 	mkdir -p generated/proto
 	$(PROTOC) -I=resources/proto -I=$(THIRD_PARTY) \
@@ -30,10 +32,11 @@ code: $(PROTO) $(PROTOC_DEP)
 	  --template-go_out=generated/proto --template-go_opt=paths=source_relative \
 	  $(PROTO)
 
-.PHONY: testdata
 testdata: $(PROTO) $(PROTOC_DEP)
+	mkdir -p testdata
+	touch testdata
 	$(PROTOC) -I=resources/proto -I=$(THIRD_PARTY) \
-	  --testdata_out=resources/testdata \
+	  --testdata_out=testdata \
 	  $(PROTO)
 
 protodep.lock: protodep.toml $(PROTODEP)
@@ -56,11 +59,11 @@ $(PROTOC):
 	curl -sSL -o $(TEMP)/protoc.zip "$(PROTOC_URL)"
 	unzip -q $(TEMP)/protoc.zip -d .local
 
-$(GO_BIN)/protoc-gen-template-go: $(shell find . -name \*.go)
+$(GO_BIN)/protoc-gen-template-go: $(GO_FILES)
 	mkdir -p $(GO_BIN)
 	$(GO_INSTALL) ./cmd/protoc-gen-template-go
 
-$(GO_BIN)/protoc-gen-testdata: $(shell find . -name \*.go)
+$(GO_BIN)/protoc-gen-testdata: $(GO_FILES)
 	mkdir -p $(GO_BIN)
 	$(GO_INSTALL) ./cmd/protoc-gen-testdata
 
