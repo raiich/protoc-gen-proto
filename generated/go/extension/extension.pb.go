@@ -109,6 +109,7 @@ func (x *MethodOpts) GetId() int32 {
 	return 0
 }
 
+// None is a message that has no field.
 type None struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	unknownFields protoimpl.UnknownFields

@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package app.v1;
+
+import "extension/extension.proto";
+
+option deprecated = true;
+option go_package = "github.com/raiich/protoc-plugin-template-go/generated/go/app/v1";
+
+service DeprecatedService {
+  option deprecated = true;
+
+  rpc DeprecatedMethod1(DeprecatedMessage) returns (extension.None) {
+    option deprecated = true;
+  }
+}
+
+message DeprecatedMessage {
+  option deprecated = true;
+  optional string message = 1 [deprecated = true];
+}
