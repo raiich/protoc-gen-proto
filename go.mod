@@ -1,4 +1,4 @@
-module github.com/raiich/protoc-plugin-template-go
+module github.com/raiich/protoc-gen-proto
 
 go 1.23.2
 

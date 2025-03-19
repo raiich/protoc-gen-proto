@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/raiich/protoc-plugin-template-go/generated/go/extension"
+	"github.com/raiich/protoc-gen-proto/generated/go/extension"
 	"google.golang.org/protobuf/compiler/protogen"
 	"google.golang.org/protobuf/proto"
 	"google.golang.org/protobuf/reflect/protoreflect"
@@ -13,7 +13,7 @@ import (
 )
 
 const (
-	ProgramName = "protoc-gen-template-go"
+	ProgramName = "protoc-gen-proto"
 
 	GeneratedFilenameSuffix = "_custom.pb.proto"
 )

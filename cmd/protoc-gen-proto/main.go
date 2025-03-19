@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/raiich/protoc-plugin-template-go/internal/gen"
+	"github.com/raiich/protoc-gen-proto/internal/gen"
 	"google.golang.org/protobuf/compiler/protogen"
 	"google.golang.org/protobuf/types/descriptorpb"
 	"google.golang.org/protobuf/types/gofeaturespb"

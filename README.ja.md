@@ -5,10 +5,10 @@
   <a href="README.ja.md">日本語 (Japanese)</a>
 </p>
 
-This is protoc plugin template.
-The default implementation of plugin generates `.proto` file from `.proto` file.
-By generating `.proto` file same with `.proto` file input,
-this repository will help understanding how to create new protoc plugin.
+これは protoc プラグインのテンプレートです。
+デフォルトのプラグイン実装は、`.proto` ファイルから `.proto` ファイルを生成します。
+入力された `.proto` ファイルと同じ `.proto` ファイルを生成する処理を把握することで、
+新しく protoc プラグインを作成する際に役立ちます。
 
 ## Tasks
 

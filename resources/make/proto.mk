@@ -14,7 +14,7 @@ PROTOC := $(BIN)/protoc
 PROTODEP := $(GO_BIN)/protodep
 PROTOC_DEP := $(PROTOC) \
   $(GO_BIN)/protoc-gen-go \
-  $(GO_BIN)/protoc-gen-template-go \
+  $(GO_BIN)/protoc-gen-proto \
   $(GO_BIN)/protoc-gen-testdata \
   protodep.lock
 BUF := $(GO_BIN)/buf
@@ -29,7 +29,7 @@ generated: $(PROTO) $(PROTOC_DEP)
 	mkdir -p generated/proto
 	$(PROTOC) -I=resources/proto -I=$(THIRD_PARTY) \
 	  --go_out=generated/go --go_opt=paths=source_relative \
-	  --template-go_out=generated/proto --template-go_opt=paths=source_relative \
+	  --proto_out=generated/proto --proto_opt=paths=source_relative \
 	  $(PROTO)
 
 testdata: $(PROTO) $(PROTOC_DEP)
@@ -59,9 +59,9 @@ $(PROTOC):
 	curl -sSL -o $(TEMP)/protoc.zip "$(PROTOC_URL)"
 	unzip -q $(TEMP)/protoc.zip -d .local
 
-$(GO_BIN)/protoc-gen-template-go: $(GO_FILES)
+$(GO_BIN)/protoc-gen-proto: $(GO_FILES)
 	mkdir -p $(GO_BIN)
-	$(GO_INSTALL) ./cmd/protoc-gen-template-go
+	$(GO_INSTALL) ./cmd/protoc-gen-proto
 
 $(GO_BIN)/protoc-gen-testdata: $(GO_FILES)
 	mkdir -p $(GO_BIN)

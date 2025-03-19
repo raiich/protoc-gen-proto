@@ -1,11 +1,11 @@
-Á Ëz¿
-Rgithub.com/raiich/protoc-plugin-template-go/generated/go/extension/extension.protozÈsyntax = "proto3";
+Á ËzÆ
+Igithub.com/raiich/protoc-gen-proto/generated/go/extension/extension.protoz‡syntax = "proto3";
 
 package extension;
 
 import "google/protobuf/descriptor.proto";
 
-option go_package = "github.com/raiich/protoc-plugin-template-go/generated/go/extension";
+option go_package = "github.com/raiich/protoc-gen-proto/generated/go/extension";
 
 extend google.protobuf.ServiceOptions {
   ServiceOpts service_opts = 50001;
@@ -27,15 +27,15 @@ message MethodOpts {
 message None {
   reserved 1 to max;
 }
-z¢
-Pgithub.com/raiich/protoc-plugin-template-go/generated/go/app/v1/deprecated.protozÕsyntax = "proto3";
+zê
+Ggithub.com/raiich/protoc-gen-proto/generated/go/app/v1/deprecated.protozƒsyntax = "proto3";
 
 package app.v1;
 
 import "extension/extension.proto";
 
 option deprecated = true;
-option go_package = "github.com/raiich/protoc-plugin-template-go/generated/go/app/v1";
+option go_package = "github.com/raiich/protoc-gen-proto/generated/go/app/v1";
 
 service DeprecatedService {
   option deprecated = true;
@@ -49,14 +49,14 @@ message DeprecatedMessage {
   option deprecated = true;
   optional string message = 1 [deprecated = true];
 }
-zó
-Mgithub.com/raiich/protoc-plugin-template-go/generated/go/app/v1/service.protoz≈syntax = "proto3";
+zÖ
+Dgithub.com/raiich/protoc-gen-proto/generated/go/app/v1/service.protozºsyntax = "proto3";
 
 package app.v1;
 
 import "extension/extension.proto";
 
-option go_package = "github.com/raiich/protoc-plugin-template-go/generated/go/app/v1";
+option go_package = "github.com/raiich/protoc-gen-proto/generated/go/app/v1";
 
 // Service is a template service.
 service Service {

@@ -5,7 +5,7 @@ import (
 	"io"
 	"testing"
 
-	"github.com/raiich/protoc-plugin-template-go/testdata"
+	"github.com/raiich/protoc-gen-proto/testdata"
 	"github.com/stretchr/testify/assert"
 	"google.golang.org/protobuf/compiler/protogen"
 	"google.golang.org/protobuf/proto"
