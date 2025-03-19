@@ -10,6 +10,8 @@ The default implementation of plugin generates `.proto` file from `.proto` file.
 By generating `.proto` file same with `.proto` file input,
 this repository will help understanding how to create new protoc plugin.
 
+<p align="center"><img src="image.svg" width="70%" alt="protoc-gen-proto" /></p>
+
 ## Tasks
 
 ```shell

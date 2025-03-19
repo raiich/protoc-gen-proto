@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" id="svgRoot" class="svg-root" width="407px" height="108px"
+     viewBox="0 0 814 216">
+    <g>
+        <g visibility="inherit">
+            <g visibility="inherit">
+                <g visibility="inherit">
+                    <g visibility="inherit">
+                        <rect stroke="#666666" fill="#c8f8ff" width="300px" height="206px" x="0px" y="8px"> </rect>
+                        <text x="8px" y="20px" visibility="inherit" font-size="7pt" dy="5px" font-family="Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New">
+                            <tspan class="text" dy="5px" x="8px">syntax = "proto3";</tspan>
+                            <tspan class="text" dy="1em" x="8px" visibility="hidden">.</tspan>
+                            <tspan class="text" dy="1em" x="8px">import "extension/extension.proto";</tspan>
+                            <tspan class="text" dy="1em" x="8px" visibility="hidden">.</tspan>
+                            <tspan class="text" dy="1em" x="8px">service Service {</tspan>
+                            <tspan class="text" dy="1em" x="16px">option (extension.service_opts) = {id: 123};</tspan>
+                            <tspan class="text" dy="1em" x="8px" visibility="hidden">.</tspan>
+                            <tspan class="text" dy="1em" x="16px">rpc Method1(Request) returns (extension.None) {</tspan>
+                            <tspan class="text" dy="1em" x="24px">option (extension.method_opts) = {id: 123};</tspan>
+                            <tspan class="text" dy="1em" x="16px">}</tspan>
+                            <tspan class="text" dy="1em" x="8px">}</tspan>
+                            <tspan class="text" dy="1em" x="8px" visibility="hidden">.</tspan>
+                            <tspan class="text" dy="1em" x="8px">message Request {</tspan>
+                            <tspan class="text" dy="1em" x="16px">optional string message = 1;</tspan>
+                            <tspan class="text" dy="1em" x="8px">}</tspan>
+                        </text>
+                    </g>
+                </g>
+                <g visibility="inherit">
+                    <g visibility="inherit">
+                        <g visibility="inherit">
+                            <rect stroke="none" fill="#fff0b3" width="103px" height="130px" x="348px" y="40px"> </rect>
+                            <text x="350px" y="50px" visibility="inherit" font-size="8pt" dy="5px">
+                                <tspan class="text" dy="5px" x="354px">protoc-gen-proto</tspan>
+                            </text>
+                            <rect stroke="#666666" fill="none" width="64px" height="26px" x="370px" y="74px"> </rect>
+                            <text x="378px" y="86px" visibility="inherit" font-size="8pt" dy="5px">
+                                <tspan class="text" dy="5px" x="378px">Eval</tspan>
+                            </text>
+                        </g>
+                    </g>
+                    <g visibility="inherit">
+                        <g visibility="inherit">
+                            <rect stroke="#666666" fill="none" width="64px" height="26px" x="380px" y="132px"> </rect>
+                            <text x="388px" y="144px" visibility="inherit" font-size="8pt" dy="5px">
+                                <tspan class="text" dy="5px" x="388px">Generate</tspan>
+                            </text>
+                        </g>
+                    </g>
+                </g>
+                <g visibility="inherit">
+                    <g visibility="inherit">
+                        <rect stroke="#666666" fill="#c2e5d1" width="300px" height="206px" x="514px" y="8px"> </rect>
+                        <text x="522px" y="20px" visibility="inherit" font-size="7pt" dy="5px" font-family="Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New">
+                            <tspan class="text" dy="5px" x="522px">syntax = "proto3";</tspan>
+                            <tspan class="text" dy="1em" x="522px" visibility="hidden">.</tspan>
+                            <tspan class="text" dy="1em" x="522px">import "extension/extension.proto";</tspan>
+                            <tspan class="text" dy="1em" x="522px" visibility="hidden">.</tspan>
+                            <tspan class="text" dy="1em" x="522px">service Service {</tspan>
+                            <tspan class="text" dy="1em" x="530px">option (extension.service_opts) = {id: 123};</tspan>
+                            <tspan class="text" dy="1em" x="522px" visibility="hidden">.</tspan>
+                            <tspan class="text" dy="1em" x="530px">rpc Method1(Request) returns (extension.None) {</tspan>
+                            <tspan class="text" dy="1em" x="538px">option (extension.method_opts) = {id: 123};</tspan>
+                            <tspan class="text" dy="1em" x="530px">}</tspan>
+                            <tspan class="text" dy="1em" x="522px">}</tspan>
+                            <tspan class="text" dy="1em" x="522px" visibility="hidden">.</tspan>
+                            <tspan class="text" dy="1em" x="522px">message Request {</tspan>
+                            <tspan class="text" dy="1em" x="530px">optional string message = 1;</tspan>
+                            <tspan class="text" dy="1em" x="522px">}</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+            <g visibility="inherit">
+                <path d="M 300 99.54761904761905 L 370 90.93650793650794 M 354.9636714783119 85.46761183328297 L 370 90.93650793650794 M 356.73743795834713 99.88661676776293 L 370 90.93650793650794"
+                      stroke="#666666"> </path>
+                <text x="320.3859712165148px" y="112.20567432420756px" visibility="inherit" font-size="9pt" dy="5px"
+                      dx="-10">
+                    <tspan class="text" dy="0.35em" x="320.3859712165148px">input</tspan>
+                </text>
+            </g>
+            <g visibility="inherit">
+                <path d="M404.2413793103448 100 L409.7586206896552 132" stroke="#666666"> </path>
+            </g>
+            <g visibility="inherit">
+                <path d="M 444 141.57142857142858 L 514 134.07142857142858 M 499.0511844921552 128.36766534769475 L 514 134.07142857142858 M 500.5988653253563 142.81268645757189 L 514 134.07142857142858"
+                      stroke="#666666"> </path>
+                <text x="464.18825391585233px" y="155.15565380072616px" visibility="inherit" font-size="9pt" dy="5px"
+                      dx="-10">
+                    <tspan class="text" dy="0.35em" x="464.18825391585233px">output</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

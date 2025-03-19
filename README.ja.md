@@ -10,6 +10,8 @@
 入力された `.proto` ファイルと同じ `.proto` ファイルを生成する処理を把握することで、
 新しく protoc プラグインを作成する際に役立ちます。
 
+<p align="center"><img src="image.svg" width="70%" alt="protoc-gen-proto" /></p>
+
 ## Tasks
 
 ```shell
