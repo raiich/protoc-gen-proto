@@ -253,6 +253,7 @@ func generateMessage(g *GeneratedFile, info *Info, message *protogen.Message) {
 			if opts.Deprecated != nil {
 				g.P("option deprecated = ", strconv.FormatBool(*opts.Deprecated), ";")
 			}
+			generateMessageOptions(g, info, opts)
 		}
 		r := d.ReservedRanges()
 		for i := 0; i < r.Len(); i++ {
@@ -264,6 +265,27 @@ func generateMessage(g *GeneratedFile, info *Info, message *protogen.Message) {
 			generateMessageField(g, info, field)
 		}
 	})
+}
+
+func generateMessageOptions(g *GeneratedFile, info *Info, opts *descriptorpb.MessageOptions) {
+	extInfo := extension.E_MessageOpts
+	ext := proto.GetExtension(opts, extInfo).(*extension.MessageOpts)
+	if ext == nil {
+		return
+	}
+	protoReflect := ext.ProtoReflect()
+	fields := protoReflect.Descriptor().Fields()
+	switch fields.Len() {
+	case 1:
+		i := 0
+		field := fields.Get(i)
+		g.P("option (", info.Ident(extInfo.TypeDescriptor()), ") = {",
+			field.Name(), ": ", protoReflect.Get(field),
+			"};",
+		)
+	default:
+		panic("implement me")
+	}
 }
 
 func generateMessageField(g *GeneratedFile, info *Info, field *protogen.Field) {

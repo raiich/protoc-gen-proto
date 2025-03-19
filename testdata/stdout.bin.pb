@@ -1,5 +1,5 @@
-ç èz®
-Igithub.com/raiich/protoc-gen-proto/generated/go/extension/extension.protozàsyntax = "proto3";
+ç èz¦
+Igithub.com/raiich/protoc-gen-proto/generated/go/extension/extension.protozØsyntax = "proto3";
 
 package extension;
 
@@ -15,11 +15,19 @@ extend google.protobuf.MethodOptions {
   MethodOpts method_opts = 50001;
 }
 
+extend google.protobuf.MessageOptions {
+  MessageOpts message_opts = 50001;
+}
+
 message ServiceOpts {
   int32 id = 1;
 }
 
 message MethodOpts {
+  int32 id = 1;
+}
+
+message MessageOpts {
   int32 id = 1;
 }
 
@@ -49,8 +57,8 @@ message DeprecatedMessage {
   option deprecated = true;
   optional string message = 1 [deprecated = true];
 }
-z…
-Dgithub.com/raiich/protoc-gen-proto/generated/go/app/v1/service.protoz¼syntax = "proto3";
+z´
+Dgithub.com/raiich/protoc-gen-proto/generated/go/app/v1/service.protozësyntax = "proto3";
 
 package app.v1;
 
@@ -69,5 +77,6 @@ service Service {
 }
 
 message Request {
+  option (extension.message_opts) = {id: 123};
   optional string message = 1;
 }

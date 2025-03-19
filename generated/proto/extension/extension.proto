@@ -14,11 +14,19 @@ extend google.protobuf.MethodOptions {
   MethodOpts method_opts = 50001;
 }
 
+extend google.protobuf.MessageOptions {
+  MessageOpts message_opts = 50001;
+}
+
 message ServiceOpts {
   int32 id = 1;
 }
 
 message MethodOpts {
+  int32 id = 1;
+}
+
+message MessageOpts {
   int32 id = 1;
 }
 

@@ -17,5 +17,6 @@ service Service {
 }
 
 message Request {
+  option (extension.message_opts) = {id: 123};
   optional string message = 1;
 }
